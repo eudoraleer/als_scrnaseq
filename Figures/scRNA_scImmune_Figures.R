@@ -3,7 +3,7 @@
 # Data: 10X 5' scRNA-Sequencing and immune profiling
 # Creator: Lu Pan, lu.pan@ki.se
 # Date last modified: 2020-04-05
-# Content: Plots for Fig. 3,4,5, S3
+# Content: Plots / Data for Fig. 3,4,5, S3
 #########################################################################################################
 
 #########################################################################################################
