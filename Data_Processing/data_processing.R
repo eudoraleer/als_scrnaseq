@@ -46,6 +46,7 @@ saveRDS(degs, "degs.RDS")
 data <- readRDS("data1.RDS")
 annot <- read.table("ALS_Annotations.txt", sep = "\t", header = T)
 data$CELL_TYPE <- annot[match(data$seurat_clusters, annot$CLUSTER),"CELL_TYPE"]
+data$CELL_TYPE_LEVEL1 <- annot[match(data$seurat_clusters, annot$CLUSTER),"CELL_TYPE_LEVEL1"]
 homotypic.prop <- modelHomotypic(data$CELL_TYPE)
 nExp_poi <- round(0.075*nrow(data@meta.data))
 nExp_poi.adj <- round(nExp_poi*(1-homotypic.prop))
@@ -102,3 +103,4 @@ tcr_data <- RunTSNE(tcr_data, reduction = "harmony", dims = 1:30)
 saveRDS(tcr_data, "tcr_data.RDS")
 
 #########################################################################################################
+
